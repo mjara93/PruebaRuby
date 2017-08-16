@@ -7,6 +7,7 @@ def read_alumnos
   line
 end
 
+# metodo para ecribir archivo promedios.txt
 def write_promedios(arr = [])
   file = File.open('promedios.txt', 'w')
   arr.each do |alumno|
@@ -16,6 +17,7 @@ def write_promedios(arr = [])
   'Archivo creado con exito!'
 end
 
+# lee el archivo, crea un arreglo de objetos
 def asignador
   alum = []
   line = read_alumnos
@@ -30,12 +32,14 @@ def asignador
   alum
 end
 
+# metodos que retorna total de alumnos en el archivo alumnos.csv
 def contar_lineas
   line = read_alumnos
   contador = line.count
   contador
 end
 
+# retorna nombre de alumnos aprobados con su promedio final
 def aprobados(arr = [])
   aprobados = ''
   arr.each do |alumno|
